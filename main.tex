@@ -660,7 +660,7 @@ We knpw that the Steady State GDP equation is simply $Y^* = K^{*\alpha}(AL)^{1-\
 
 \subsubsection{Comparative Statistics}
 
-Our key steady state equations are \eqref{ss capital} and \eqref{ss gdp}. We most look at the relationship between each of these steady state variables and the parameters.
+Our key steady-state equations are \eqref{ss capital} and \eqref{ss gdp}. We must look at the relationship between each of these steady-state variables and the parameters.
 
 \begin{itemize}
     \item $\nearrow \beta \Rightarrow \nearrow K^*, \nearrow Y^*$
@@ -1557,7 +1557,6 @@ Now we must assess this relationship in the short run, at business cycle frequen
     \caption{Total Hours Worked and Real Wage fluctuations relative to GDP}%
     \label{fig:panel format}%
 \end{figure}
-
 \begin{intu}
     In booms, GDP $\uparrow$, THP $ \uparrow$ and $w\uparrow$. This makes THP and $w$ \textbf{procyclical}. 
     
@@ -1801,7 +1800,7 @@ An increase in $A$ will lead to an increase in labour demand, but obviously no s
 
 \newpage
 
-\section{Introducing Theories of Unemployment}
+\section{Efficiency Wages (NSC)}
 
 \subsubsection{Employment over the Business Cycle}
 
@@ -1856,7 +1855,761 @@ To understand unemployment we must look at the inflows and outflows of unemploym
 
 Quantitatively, this last case is the main reason why the unemployment rate increases so much in recessions. It is important in understanding \textbf{jobless recoveries}, where GDP recovers, but unemployment remains high.
 
-Most times decreases in $u_t$ reflects a good state of the economy, but not always.
+Most times decreases in $u_t$ reflect a good state of the economy, but not always.
+
+\paragraph{Stats} \mbox{}
+
+\begin{figure}[h]
+    \centering
+    \subfloat[\centering 2013 Stats]{{\includegraphics[width=7cm]{photos/2013 employment stats.png} }}%
+    \qquad
+    \subfloat[\centering 2010 Stats]{{\includegraphics[width=7cm]{photos/2010 employment stats.png} }}%
+    \caption{2010-2013: Unemployment and Employment stats}%
+    \label{fig:2010-2013 employment stats}%
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=7cm]{photos/2020 employmwnt stats.png}
+    \caption{2020: Unemployment and Employment Throughout the Recession}
+    \label{fig:2020 employment stats}
+\end{figure}
+
+\subsection{Theories of Unemployment}
+
+Our neoclassical model explains \textit{why workers may decide to work more/fewer hours} $h$, \textit{how many weeks per year a worker chooses to work.} It does not explain \textbf{why someone who wants to work cannot find a job}. We must include friction in the model to break market clearing.
+
+\subsubsection{Price Rigidity}
+
+The simplest theory of unemployment comes from Keynesian price rigidities. Rigid wages cause labour markets not to clear.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{photos/rigid wages.png}
+    \caption{Rigid Wages causing unemployment}
+    \label{fig:rigid wages}
+\end{figure}
+
+At the macro level, it seems that average real wages fluctuate very little. But this may be clouded by \textbf{composition effects}.
+
+\begin{intu}
+        \textbf{Composition Effects}:
+
+    Suppose there are two types of workers, high skill and low skill. Suppose that employment of low-skill workers is more volatile. In a recession, the share of low-skill workers will decrease. This would \hl{bias average wages upward}, even if the wages of high and low-skilled workers are going down individually.
+\end{intu}
+
+After controlling for this bias, wages are much more cyclical. Other authors have found different results.
+
+This kind of theory is subject to the "Barro Critique":
+
+\begin{definition}
+    \textbf{Barro Critique:}
+
+    Employers and unemployed workers would mutually benefit from agreeing to lower wages in this scenario. It makes it implausible that such wage rigidity would be sustained unless there were institutional constraints sustaining them (e.g. minimum wage).
+\end{definition}
+
+\subsubsection{Efficiency Wages}
+
+This theory of unemployment comes from an informational hazard, \textbf{moral hazard}. When performing a task the workers choose the level of effort. But firms are not able to observe directly that level of effort. There is a probability the worker will get \textbf{caught shirking}.
+
+\begin{shaded}
+    \textbf{The model}:
+
+    Take a 2-period version. Each period the worker's utility is given by
+    \[u_t w_t - \epsilon_t\]
+    where $w_t$ is the real wage, and $\epsilon_t$ is the level of effort. Workers have two options:
+
+    \begin{enumerate}
+        \item work $\epsilon>0$, implying $u = w - \epsilon$.
+
+        \item Shirk: $\epsilon=0$, implying
+        \begin{equation*}
+            \left\{\begin{array}{cc}
+            u = w & \text{if not caught} \\
+            \text{ fired} & \text{if caught}
+        \end{array} \right.
+        \end{equation*}
+
+        \begin{note}
+            It is assumed that the firing happens in between periods.
+        \end{note}
+    \end{enumerate}
+\end{shaded}
+
+When will the worker exert effort? When the value of working $V$, is greater than the value of shirking $V^s$. So we must compute these values.
+
+\begin{deriv}
+    First, we calculate $V$, the value of working. We have:
+    \begin{align*}
+        V &= u_1 + \beta u_2 \\
+        &= w - \epsilon + \beta\left[\delta V^U + (1-\delta)w\right]
+    \end{align*}
+    where $\beta$ controls for impatience. and $V^U$ is the value of unemployment
+
+    Now, $V^s$. The shirker obtains $u_1 = w$ in the first period. However, if caught they lose their job in the second period. The shirker gets caught with probability $\theta$. Thus:
+
+    \begin{align*}
+        V^s &= u_1 + \beta u_2 \\
+        &= w + \beta\left[(\delta+\theta)V^U + (1-\delta-\theta)w\right]
+    \end{align*}
+\end{deriv}
+\begin{intu}
+    Shirking gives you more value in period 1, but it increases the risk of losing your job in period 2.
+\end{intu}
+
+in this environment, firms want to pay the lowest wages that induce workers to put in effort.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{photos/v and v shirk.png}
+    \caption{Finding the Efficient Wage where the Value of Working and Value of Shirking is Equal}
+    \label{fig:efficient wage}
+\end{figure}
+
+We must find $w$ s.t $V=V^s$.
+
+\begin{deriv}
+We find $V=V^s$:
+    \begin{equation}
+    \label{derivation of efficient wage}
+    \begin{aligned}
+    w-\varepsilon+\beta\left[\delta V^U+(1-\delta) w\right]&=w+\beta\left[(\delta+\theta) V^U+(1-\delta-\theta) w\right] \\
+    w+\beta(1-\delta) w-w-\beta(1-\delta-\theta) w&=\varepsilon-\beta \delta V^U+\beta(\delta+\theta) V^U \\
+    \Rightarrow w &= V^U + \dfrac{\epsilon}{\beta\theta}.
+\end{aligned}
+\end{equation}
+This is the so-called \hl{"no-shirking condition"} (NSC).
+\end{deriv}
+
+Now, we relate this to unemployment. We must compute $V^U$, the value of unemployment.
+\begin{note}
+    An unemployed worker finds a job with probability $f$.
+\end{note}
+Therefore, we have:
+\[V^U = (1-f)b + fw\]
+where $b$ reflects unemployment benefits, and the value of leisure.  If we combine this expression for $V^U$ and the NSC we get
+\begin{mdframed}
+    \begin{equation}
+        \label{Aggregate NSC}
+        \begin{aligned}
+            w &= (1-f)b + fw + \dfrac{\epsilon}{\beta\theta} \\
+            w &= b + \dfrac{1}{\beta(1-f)}\dfrac{\epsilon}{\theta}
+        \end{aligned}
+    \end{equation}
+
+    This is the \textbf{aggregate NSC}.
+\end{mdframed}
+
+\begin{shaded}
+    The model implies the following comparative statics:
+    \begin{itemize}
+        \item $b\uparrow \Rightarrow w\uparrow$ higher outside options require more pay to induce effort
+        \item  $\epsilon\uparrow\Rightarrow w\uparrow$ The more costly effort is, the more pay is required.
+        \item  $\theta\uparrow\Rightarrow w\downarrow$ The easier it is to monitor, the less pay is required
+        \item $f\uparrow\Rightarrow w\uparrow$ If it is easier to find a job when unemployed, more rewards are needed.
+        \item $\beta\uparrow\rightarrow w\downarrow$ The more patient people value the punishment more. This is because
+    \end{itemize}
+\end{shaded}
+
+\subsubsection{Equilibrium Unemployment}
+
+Let there be $L$ workers in the labour force. We can write changes in unemployment as:
+\[\Delta U = \delta[L-U] - fU\]
+\begin{note}
+    In equilibrium, only exogenous job loss takes place.
+\end{note}
+
+In steady state, $\Delta U=0$, which implies
+\[u = \dfrac{U}{L} = \dfrac{\delta}{\delta+f}\]
+
+\begin{note}
+    This can be rewritten as, $u\delta + uf = \delta$. Giving us:
+    \[f(u) = \delta \dfrac{1-u}{u}\]
+    where an increase in $u$ leads to a decrease in $f$. Higher rates of unemployment mean it is harder to find a job.
+\end{note}
+
+\begin{shaded}
+    Final Efficiency Wages:
+
+    Returning to NSC, we can write
+    \[w = b \dfrac{1}{\beta[1-f(u)]}\dfrac{\epsilon}{\theta}\]
+
+    Therefore, as $u\uparrow, f\downarrow, w^{NSC}\downarrow$. That is, as the rate of unemployment increases, it gets harder to find a job, and therefore our efficiency wage (NSC wage) decreases.
+\end{shaded}
+
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width=10cm]{photos/NSC diagram.png}
+        \caption{$L=N$ in this economy so employment rate equals $e = \frac{E}{N} = \frac{E}{L} = 1-u$}
+        \label{fig:my_label}
+    \end{figure}
+
+    \begin{intu}
+        The Shirking problem drives a wedge between labour demand and labour supply. This is driven by friction called moral hazard on behalf of the workers.
+    \end{intu}
+
+    \begin{shaded}
+        Assessing the Shirking model:
+
+        Pros:
+        \begin{itemize}
+            \item Can generate unemployment as an equilibrium phenomenon
+        \end{itemize}
+        Cons:
+        \begin{itemize}
+            \item The monitoring technology, $\theta$, it is hard to think that changes in this parameter help understand $\Delta u$.
+            \item \textbf{Bonding Critique}: there are alternative payment arrangements involving bonds that would eliminate involuntary unemployment.
+        \end{itemize}
+    \end{shaded}
+
+\section{Trade Union Model}
+
+In this model, \textbf{workers} want higher wages via collective bargaining. Suppose the workers get together as a group to form a union and have a collective preference of the union $V^W$ given by
+\[V^W = N^\gamma (w-V^U)\]
+where $N$ is the number of workers, $w$ is the real wage, and $V^U$ is the value of unemployment. We can think of $w-V^U$ as the union premium, the additional utility you receive by being in the union.
+
+The parameter $\gamma$ shapes the relative preference of the union between employment and higher wages. If $\gamma=0$ the union only cares about raising wages no matter what happens to employment.
+
+\subsection{Right-to-manage}
+
+\begin{shaded}
+    In the right-to-manage framework, the union and the employer bargain over wages (Nash bargaining solution to determine wages). The employer sets employment unilaterally.
+
+    The labour demand curve $N = N^D(w)$.
+\end{shaded}
+
+$w$ is the outcome of the following maximisation:
+\begin{equation}
+\begin{array}{r}
+{\left[N^\gamma\left(w-V^U\right)\right]^\lambda \Pi(w)^{(1-\lambda)}} \\
+\text { s.t. } N=N^d(w)
+\end{array}
+\end{equation}
+
+where $\lambda$ is the bargaining power of the union, 0 implies no power, and $\Pi(.)$ is the profit function of the firm.
+
+\begin{deriv}
+    To solve for our Nash Product maximisation, we substitute the constraint in to the first equation.
+    \begin{equation}
+\max _w \lambda\left[\gamma \log \left(N^d(w)\right)+\log (\right.  \left.\left.w-V^U\right)\right] +(1-\lambda) \log (\Pi(w))
+\end{equation}
+
+We then find the FOC:
+\begin{equation}
+\lambda \gamma \frac{1}{N^d(w)} \frac{d N^d(w)}{d w}+\lambda \frac{1}{w-V^U}+(1-\lambda) \frac{1}{\Pi(w)} \frac{d \Pi(w)}{d w}=0
+\end{equation}
+
+multiplying by $w$ we have
+
+\begin{equation}
+\lambda \gamma \frac{w}{N^d(w)} \frac{d N^d(w)}{d w}+\lambda \frac{w}{w-V^U}+(1-\lambda) \frac{w}{\Pi(w)} \frac{d \Pi(w)}{d w}=0
+\end{equation}
+
+\begin{note}
+    We must note the elasticities:
+
+    The elasticity of employment w.r.t wage:
+    \begin{equation}
+        \label{elasticity of employment wrt wage}
+        -\epsilon_N = \frac{w}{N^d(w)} \frac{d N^d(w)}{d w}
+    \end{equation}
+
+    The elasticity of profit w.r.t wage:
+    \begin{equation}
+        \label{elasticity of profit wrt wage}
+        -\epsilon_\Pi = \frac{w}{\Pi(w)} \frac{d \Pi(w)}{d w}
+    \end{equation}
+\end{note}
+
+Re-writing in terms of the elasticities:
+\begin{equation}
+    -\lambda\gamma\epsilon_N + \lambda \dfrac{w}{w-V^U}-(1-\lambda)\epsilon_\Pi = 0
+\end{equation}
+Then we solve for wage, $w$:
+\begin{equation}
+\begin{aligned}
+\lambda w & =\left(w-V^U\right)\left[(1-\lambda) \varepsilon_{\Pi}+\lambda \gamma \varepsilon_N\right] \\
+& \Longleftrightarrow \\
+\lambda w-w\left[(1-\lambda) \varepsilon_{\Pi}+\lambda \gamma \varepsilon_N\right] & =-V^U\left[(1-\lambda) \varepsilon_{\Pi}+\lambda \gamma \varepsilon_N\right] \\
+& \Longleftrightarrow \\
+w & =\left[\frac{\lambda \gamma \varepsilon_N+(1-\lambda) \varepsilon_{\Pi}}{\lambda \gamma \varepsilon_N+(1-\lambda) \varepsilon_{\Pi}-\lambda}\right] V^u
+\end{aligned}
+\end{equation}
+
+\begin{note}
+    The bracketed term is greater than 1. Therefore we can re-write our equation simply as
+    \begin{equation}
+\begin{aligned}
+w & =\left[\frac{\lambda \gamma \varepsilon_N+(1-\lambda) \varepsilon_{\Pi}}{\lambda \gamma \varepsilon_N+(1-\lambda) \varepsilon_{\Pi}-\lambda}\right] V^u \\
+& =(1+\mu) V^u
+\end{aligned}
+\end{equation}
+\end{note}
+
+where $\mu>0$ is known as the \textbf{union mark-up}.
+\end{deriv}
+
+This means that workers are strictly better off than the unemployed, therefore for there to be unemployment it must be involuntary.
+
+\subsubsection{Comparative Statics}
+
+If we re-express our equation in terms of the markup, $\mu$.
+
+\begin{equation}
+\begin{aligned}
+\mu & =\frac{\lambda \gamma \varepsilon_N+(1-\lambda) \varepsilon_{\Pi}}{\lambda \gamma \varepsilon_N+(1-\lambda) \varepsilon_{\Pi}-\lambda}-1 \\
+& =\frac{\lambda \gamma \varepsilon_N+(1-\lambda) \varepsilon_{\Pi}-\lambda \gamma \varepsilon_N-(1-\lambda) \varepsilon_{\Pi}+\lambda}{\lambda \gamma \varepsilon_N+(1-\lambda) \varepsilon_{\Pi}-\lambda} \\
+& =\frac{\lambda}{\lambda \gamma \varepsilon_N+(1-\lambda) \varepsilon_{\Pi}-\lambda} \\
+& =\frac{1}{\gamma \varepsilon_N+\left(\frac{1-\lambda}{\lambda}\right) \varepsilon_{\Pi}-1}
+\end{aligned}
+\end{equation}
+
+This gives us:
+\begin{itemize}
+    \item $\uparrow\lambda\Rightarrow\mu\uparrow$ If the union's bargaining power increases, the markup increases.
+    \item  $\uparrow\gamma\Rightarrow\mu\downarrow$ If the union cares more about maintaining the employment of the workers, the markup will decrease.
+    \item $\uparrow\epsilon_N \Rightarrow\mu\downarrow$, if the elasticity of employment wrt wages increases, the markup will decrease. 
+    \item $\uparrow\epsilon_\Pi\Rightarrow\mu\downarrow$ If the elasticity of profits wrt wages increases, firms will be less willing to employ and therefore the markup will decrease.
+\end{itemize}
+
+Now we connect this to aggregate unemployment. We have considered the problem of a single firm/union. Now we create an economy that consists of many firms/unions. We still have the same value of unemployment
+\[V^u = (1-f)b +fw\]
+
+where $f$ is the probability of individuals finding a job, and $b$ is the payoff from unemployment. We combine this with the wage equation:
+
+\[w = (1+\mu)[(1-f)b + fw]\]
+solving for $w$
+
+\begin{equation}
+\begin{aligned}
+w-(1+\mu) f w= & (1+\mu)(1-f) b \\
+& \Longleftrightarrow \\
+w & =\frac{(1+\mu)(1-f) b}{1-(1+\mu) f} \\
+& =\frac{(1+\mu)(1-f) b}{1+\mu-(1+\mu) f-\mu} \\
+& =\frac{(1+\mu)(1-f)}{(1+\mu)(1-f)-\mu} b
+\end{aligned}
+\end{equation}
+
+where $f(u)=\delta\dfrac{1-u}{u}$, which implies an increase in unemployment leads to a decrease in the probability for unemployed workers to find a job, which decreases the wage.
+
+The opposite of this gives us the union bargaining curve. That is, as unemployment decreases the job-finding rate increases, and wages increase.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{photos/union bargaining curve.png}
+    \caption{Union Bargaining Curve}
+    \label{fig:union bargaining curve}
+\end{figure}
+
+\begin{shaded}
+    Assessing the Union Bargaining Model
+
+    Pros: we have a coherent explanation of
+    \begin{itemize}
+        \item Why the equilibrium wage is greater than the market clearing wage
+        \item Why the unemployed would like those jobs
+        \item The existence of involuntary unemployment
+    \end{itemize}
+    Cons: the model seems inconsistent with the empirical evidence on Unions in Britain
+    \begin{itemize}
+        \item Unions were stronger in the 70s but lost power in the 80s and 90s. 
+        \item Simultaneously, in the 80s unemployment increased.
+    \end{itemize}
+\end{shaded}
+
+
+\section{Search Theory}
+
+This model builds on the Diamond/Mortensen/Pissarides (DMP) model. This model is directly associated with the \textbf{flows approach} to labour markets, where we study the inflows and outflows of (un)employment.
+
+We are explicitly taking into account the fact that the process of finding a job is \textbf{time-consuming} and a two-sided matching problem.
+
+\begin{note}
+    Unemployment naturally arises as the "normal" time for workers to find a suitable job.
+\end{note}
+
+In this theory, we focus on two employment states, unemployed (U), and employed (E). We neglect Inactive (I) because the changes to participation are quantitatively less important to explain fluctuations in THP at business cycle frequency.
+
+\begin{shaded}
+    There are two flows that are important
+
+    $f$: the rate at which unemployed workers find jobs (outflow from unemployment)
+
+    $s$: the rate at which employed workers lose their jobs (inflow to unemployment)
+
+    This gives us
+    \begin{align*}
+      \Delta U &= sE - fU  \\
+      &\Leftrightarrow \\
+      \Delta u &= s(1-u) - fu
+    \end{align*}
+    \[\]
+\end{shaded}
+
+\subsection{Summary of Facts}
+
+\begin{itemize}
+    \item Both inflow and outflow rates are lower in Europe than in the US
+    \item  This means that the US labour market is more "liquid"
+    \item  Cyclical Variation: separations rise, and job finding reduces in recessions
+    \item  Secular Variation: Large secular falls in $f$ in Europe in the 80s.
+\end{itemize}
+
+We want to build a model designed to explain the behaviour in $f$. In the US $f$ is quantitatively more important to explain $u$ over the business cycle.
+
+\subsection{Properties of the Matching Function}
+
+Job finding is the outcome of a \textbf{bilateral matching process between unemployed workers (U), and firm's vacancies (V)}. Several frictions make this process complicated. DMP summarise these complications into an aggregate matching function. Each period, $M(U,V)$ successful matches will take place.
+
+
+\begin{itemize}
+    \item $\dfrac{dM}{dU}>0, \dfrac{dM}{dV}>0$, and M is concave in each argument.
+    \item M has constant returns to scale: $M(\alpha U, \alpha v) = \alpha M(U,V)$.
+    \item This final assumption seems to hold in empirical tests.
+\end{itemize}
+
+\subsection{The model}
+
+Given these assumptions, we can infer the matching rats:
+\begin{itemize}
+    \item Job-\textbf{Finding} rate, $f = \dfrac{M(U,V)}{U} = M(1,\frac{V}{U}) = f(\theta)$
+    \item Job-\textbf{Filling} rate, $q = \dfrac{M(U,V)}{V} = M(\frac{U}{V},1) = q(\theta)$
+\end{itemize}
+
+where $\theta=\frac{V}{U}$ is the \textbf{labour market tightness}. When $\theta\uparrow$, there are more vacancies chasing fewer unemployed workers. This means that $f(]the
+)\uparrow$ and $q(\theta)\downarrow$. It is harder for the firm to fill its vacancies. Higher market tightness is good for the worker.
+
+We also introduce \textbf{Vacancy Costs}. To open a vacancy, firms must pay a cost of $c$. 
+
+\begin{note}
+    If there was free entry into vacancies, firms can open as many vacancies as they desire. As long as vacancies are profitable, firms would open infinite vacancies which would lead to \textit{zero unemployment}.
+\end{note}
+
+\paragraph{Additional Assumptions} \mbox{}
+
+\begin{itemize}
+    \item Firms hire workers through vacancies, each of which can hire one worker
+    \item  When employed, a pair jointly produces \textbf{marginal product} $p$.
+    \item  The unemployed receive \textbf{unemployment benefits}, $b$.
+    \item We will look at a 1-period model.
+\end{itemize}
+
+To solve the model we need to determine the payoffs to workers and firms.
+
+\begin{enumerate}
+    \item Employed worker payoff:
+    \[W_E = w\]
+
+    \item  Unemployed worker payoff:
+    \[W_u = (1-f(\theta)b + f(\theta)w\]
+
+    \item productive firm payoff:
+    \[\Pi_F = p-w\]
+
+    \item  Vacancy payoff:
+    \[\Pi_V = -c + q(\theta)(p-w) + \underset{=0}{\underbrace{(1-q(\theta))0}}\]
+\end{enumerate}
+
+\paragraph{Job Creation Condition}\mbox{}
+
+Because we assume free entry, the value of a vacancy $\Pi_V$ is driven to 0. This implies 
+\begin{gather*}
+    -c + q(\theta)(p-w) = 0 \\
+    \Leftrightarrow \\
+    \Pi_F = p-w=\dfrac{c}{q(\theta)} \\
+    \Leftrightarrow \\
+    w-p = -\dfrac{c}{q(\theta)}
+\end{gather*}
+
+Therefore, an increase in market tightness, $\uparrow\theta$, leads to a decrease in the job-filling rate, $q(\theta)\downarrow$, which leads to a decrease in wage $w \downarrow$.
+
+This is called the \textbf{Job Creation Condition} (JC). It is analogous to the labour demand curve in the neoclassical model.
+
+
+\paragraph{Wage-Bargaining Condition}
+
+We must close the model, so we find a wage-setting mechanism that relates $w$ to $\theta$.
+
+\begin{note}
+    A search problem entails \textbf{ex-post rents} to employed workers and firms, i.e. it is costly for a firm to find an alternative worker: $-c<p-w$, and $q(\theta)<1$. Also, it is costly for the workers to find an alternative firm: $b<w$, and $f(\theta)<1$.
+\end{note}
+
+Wages determine the split of rents (the surplus) between workers and firms. In the DMP we assume the rents are split via Nash Bargaining. Additionally, we will assume that the firm and workers have equal bargaining power, and thus the rents are split equally.
+
+\[\Pi_F - \Pi_V = W_E - W_U\]
+Because in equilibrium the value of vacancies is driven to 0, this is simply
+\[W_E - \Pi_F = W_U\].
+
+\begin{deriv}
+    On the LHS we have:
+   \begin{equation}
+W_E-\Pi_F=w-(p-w)=2 w-p
+\end{equation}
+
+RHS:
+\begin{equation}
+\begin{aligned}
+W_U & =(1-f) b+f W_E \\
+& =(1-f) b+f\left(W_E-W_U\right)+f W_U \\
+& =(1-f) b+f \frac{c}{q}+f W_U \\
+\text{we are using the fact that: } &W_E - W_U = \Pi_F = \frac{c}{q} \\
+W_U - fW_U &= (1-f)b + f\frac{c}{q} \\
+W(1-f) &= (1-f)b + f\frac{c}{q} \\
+W_U &= b + \dfrac{f(\theta)}{1-f(\theta)}\dfrac{c}{q(\theta)}
+\end{aligned}
+\end{equation}
+
+Equating the LHS and RHS, we have:
+\begin{align*}
+    2w-p &= b + \dfrac{f(\theta)}{1-f(\theta)}\dfrac{c}{q(\theta)} \\
+    \Leftrightarrow& \\
+    w&= \dfrac{1}{2}p + \dfrac{1}{2}b + \dfrac{1}{2}\dfrac{f(\theta)}{1-f(\theta)}\dfrac{c}{q(\theta)}
+\end{align*}
+This is the \textbf{Wage Bargaining Conditions}
+.\begin{note}
+    We have all halves here because the firm and workers have equal bargaining power.
+\end{note}
+\end{deriv}
+
+\newpage
+\begin{shaded}
+    \paragraph{Comparative Statics} \mbox{}
+
+    \begin{gather*}
+        p\uparrow\Rightarrow w\uparrow \\
+        b\uparrow \Rightarrow w\uparrow \\
+        c\uparrow\Rightarrow w \uparrow \\
+        \theta\uparrow \Rightarrow q(\theta)\downarrow, f(\theta)\uparrow \Rightarrow w\uparrow
+    \end{gather*}
+
+    An increase in market tightness makes it easier for workers to find jobs. Therefore, the outside option goes up in negotiation.
+\end{shaded}
+
+We have our model equilibrium:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{photos/search and matching equilibrium.png}
+    \caption{Search and Matching Equilibrium. Our Wage Setting and Job Creation Conditions}
+    \label{fig:search and matching equilibrium}
+\end{figure}
+
+\section{Analysis of the DMP model}
+
+We determined equilibrium wages, $w^*$ and tightness, $\theta^*$. This gives us
+\[f^* = f(\theta^*) = M(1,\theta^*), \quad q^* = q(\theta^*) = M(\frac{1}{\theta^*},1)\]
+
+In steady state, $u^* = \dfrac{s}{s+f^*}$
+
+\subsection{Application to the Business Cycle}
+
+We will represent the real business cycles as shocks to real productivity, $p$, which drive the cycle.
+
+Our Equilibrium Conditions were:
+
+\begin{equation}
+\begin{aligned}
+\mathrm{JC} w & =p-\frac{c}{q(\theta)} \\
+\mathrm{WB} w & =\frac{1}{2} p+\frac{1}{2} b+\frac{1}{2} \frac{f(\theta)}{1-f(\theta)} \frac{c}{q(\theta)}
+\end{aligned}
+\end{equation}
+
+By equating the two we find $\theta^*$. We can see that shocks to $p$ have differing effects on each of the curves, due to the coefficient.
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{photos/shock to p DMP.png}
+    \caption{Result of a shock to real Productivity}
+    \label{fig:DMP shock p}
+\end{figure}
+
+$p \downarrow \Longrightarrow \theta^* \downarrow \Longrightarrow f\left(\theta^*\right) \downarrow \Longrightarrow u^*=\frac{s}{s+f^*} \uparrow$. This result is not ambiguous.
+
+\begin{equation}
+\begin{gathered}
+\frac{1}{2} p+\frac{1}{2} b+\frac{1}{2} \frac{f(\theta)}{1-f(\theta)} \frac{c}{q(\theta)}=p-\frac{c}{q(\theta)} \\
+\frac{1}{2} b+\frac{1}{2} \frac{f(\theta)}{1-f(\theta)} \frac{c}{q(\theta)}+\frac{c}{q(\theta)}=\frac{1}{2} p
+\end{gathered}
+\end{equation}
+LHS is increasing in $\theta$. Thus, this equation implies that increases in $p$ lead to increases in $\theta$.
+
+\subsection{DMP Implications on Vacancies}
+
+In the steady state, matches destroyed (jobs lost) must be equal to the number of new matches
+\[s(1-u) = M(u,v)\]
+
+Thus, if $u\downarrow \Rightarrow LHS\uparrow$ 
+ and $RHS\downarrow$, therefore, $v$ must increase to keep equality. Therefore, as the unemployment rate decreases, vacancies increase, meaning that vacancies are \textbf{pro-cyclical}. This equation defines the \textbf{Beveridge Curve}.
+
+ \begin{figure}[h]
+     \centering
+     \includegraphics[width=12cm]{photos/bc curve.png}
+     \caption{Beveridge Curve}
+     \label{fig:BC curve}
+ \end{figure}
+Using the $\theta^*$ from our Job Creation and Wage setting conditions, we can draw a line with \textbf{angle} $\theta$. Where this line intersects the BC, will be the equilibrium vacancy and unemployment rates.
+
+ This curve came from real-life data. So, we have seen that the model can \textbf{qualitatively} explain unemployment over the business cycle, but what about quantitatively?
+
+ \subsection{Model for cyclical nature of Job finding Rate}
+
+
+$f$ is a very pro=cyclical variable. 1\% increase in productivity leads to a 5\% increase in $f$.
+
+Our solution for $\theta$ is
+\begin{equation}
+\frac{1}{2} b+\frac{1}{2} \frac{f(\theta)}{1-f(\theta)} \frac{c}{q(\theta)}+\frac{c}{q(\theta)}=\frac{1}{2} p
+\end{equation}
+and therefore:
+\begin{equation}
+\frac{d f}{d p} \frac{p}{f}=\frac{f^{\prime}(\theta) \theta}{f} \frac{d \theta}{d p} \frac{p}{\theta}
+\end{equation}
+
+Now, in order to compute elasticities, we must make a functional form assumption about $M(U,V) = \frac{UV}{U+V}$.
+\begin{note}
+    We have CRS in the matching function.
+\end{note}
+
+We have most of the elements in Equation (75):
+
+\begin{gather}
+    f(\theta) = M(1,\theta) = \dfrac{\theta}{1+\theta} \\
+    q(\theta) = M(\frac{1}{\theta},1) = \dfrac{\frac{1}{\theta}}{\frac{1}{\theta}+1} = \dfrac{1}{1+\theta} \\
+    f^\prime(\theta) = \dfrac{1}{1+\theta}-\dfrac{\theta}{(1+\theta)^2}=\dfrac{1}{(1+\theta)^2}\\
+    \dfrac{f^\prime(\theta)\theta}{f}= \dfrac{\theta}{(1+\theta)^2}\dfrac{1+\theta}{\theta} = \dfrac{1}{1+\theta}
+\end{gather}
+
+thus, we only need to compute $\dfrac{d\theta}{dp}\dfrac{p}{\theta}$. Substituting in $f(\theta)$ and $q(\theta)$:
+
+\begin{equation}
+\begin{gathered}
+ \frac{1}{2} b+\frac{1}{2} \dfrac{\frac{\theta}{1+\theta}}{1-\frac{\theta}{1+\theta}} c(1+\theta)+c(1+\theta)=\frac{1}{2} p \\
+ \dfrac{\frac{\theta}{1+\theta}}{\frac{1+\theta-\theta}{1+\theta}} c(1+\theta)+2 c(1+\theta)=p-b \\
+  \Longleftrightarrow \\
+ c(1+\theta)(2+\theta)=p-b \\
+\end{gathered}
+\end{equation} 
+
+Differentiating both sides wrt $p$ we have:
+\[c(2+\theta) \dfrac{d\theta}{dp} + c(1+\theta)\dfrac{d\theta}{dp} = 1\]
+
+which gives:
+\[\dfrac{d\theta}{dp}=\dfrac{1}{c(3+2\theta)}\]
+
+
+\begin{note}
+It is difficult to obtain estimates of $c$, so we will continue.
+\end{note}
+
+
+\begin{equation}
+\begin{aligned}
+\frac{d \theta}{d p} \frac{p}{\theta} & =\frac{1}{c(3+2 \theta)} \frac{p}{\theta} \\
+& =\frac{p}{c \theta(3+2 \theta)} \frac{p-b}{p-b} \\
+& =\frac{c(1+\theta)(2+\theta)}{c \theta(3+2 \theta)} \frac{p}{p-b} \\
+& =\frac{(1+\theta)(2+\theta)}{\theta(3+2 \theta)} \frac{1}{1-\frac{b}{p}}
+\end{aligned}
+\end{equation}
+
+where we have used Equation (80) ($p-b = c(1+\theta)(2+\theta)$.
+
+it is possible to provide reasonable numbers for $\theta=1$ and $\frac{b}{p}=0.4$. This implies
+\begin{itemize}
+    \item $\dfrac{d\theta}{dp}\dfrac{p}{\theta}\approx 2$
+    \item $\frac{d f}{d p} \frac{p}{f}=\frac{f^{\prime}(\theta) \theta}{f} \frac{d \theta}{d p} \frac{p}{\theta}=\frac{1}{1+\theta} \frac{d \theta}{d p} \frac{p}{\theta} \approx 1$
+\end{itemize}
+
+\begin{note}
+    Our elasticity is much less than the empirical findings of 5. this model severely underestimates fluctuations in $f$.
+\end{note}
+
+
+\subsection{Hall (2005) Model}
+
+Hall proposes wage rigidity. We had been assuming that wages are set through Nash Bargaining, but now we are not. What are the bounds for the possible \textbf{acceptable} wages?
+
+\begin{enumerate}
+    \item Lowest Acceptable Wage: Worker is indifferent between working or not
+    \[W_E = \underline{w} = (1-f(\theta)\]
+\end{enumerate}
+
+\begin{enumerate}
+    \item Lowest Acceptable Wage: Worker is indifferent between working or not
+    \[W_E = \underline{w} = (1-f(\theta)\underline(w) = W_U\]
+therefore, $\underline{w} = b$
+
+
+    \item  Maximum acceptable wage: Firms earn zero profit
+\[\Pi_F = p - w = 0 = \Pi_V \]
+Therefore, $w = p$
+\end{enumerate}
+
+We know that any $w \in [b,p]$ is a possible outcome
+
+\paragraph{Hall's Solution}\mbox{}
+
+Wages follow a "norm" and remain unchanged over time. \hl{The Barro critique does not apply here since it is a feasible outcome from bargaining}.
+
+\begin{figure}[h]
+\centering
+\includegraphics[width=10cm]{photos/halls solution.png}
+\caption{Hall's Solution where wages follow a "norm".}
+\label{fig: Halls solution}
+\end{figure}
+
+
+\subsubsection{Applying Wage Norms to DMP}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{photos/applying rigid wage.png}
+    \caption{The effect of a recession when there are wage "norms"}
+    \label{fig: applied wage norms}
+\end{figure}
+
+In our normal case where wages are set through Nash Bargaining, we would move from point a to b. in the case where we have a wage norm, we move from a to c. 
+
+
+\paragraph{Quantitatively} \mbox{}
+
+\begin{deriv}
+JC equals $w_{norm}$:
+\[p - \dfrac{c}{q(\theta)} = w_{norm} \]
+
+Differentiating wrt $p$:
+\begin{equation}
+\begin{aligned}
+\dfrac{d\theta}{sp}\dfrac{p}{\theta}& = \dfrac{1}{c}\dfrac{p}{\theta} =  \dfrac{1}{c}\dfrac{p}{\theta}\dfrac{p-w_{norm}}{p-w_{norm}} \\
+&= \dfrac{1+\theta}{\theta}\dfrac{P}{p-w_{norm}}
+\end{aligned}
+\end{equation}
+
+where we used the fact that $p-w_{norm}=\frac{c}{q(\theta)}=c(1+\theta)$.
+
+\end{deriv}
+ This gives us
+
+\[\dfrac{df}{sp}\dfrac{p}{f} = \dfrac{1}{\theta}\dfrac{1}{1-\frac{w_{norm}}{P}}\]
+
+If $\theta=1$ and $\frac{w_{norm}}{P}=0.8$, then our elasticity $\frac{df}{dp}\approx 5$ like the data.
+
+
+\begin{shaded}
+\paragraph{Evaluating the Hall model} \mbox{}
+
+Pros:
+\begin{itemize}
+\item Provides theory that explains variations in unemployment over the business cycle
+\item The element of wage rigidity is not subject to Barro's critique.
+\end{itemize}
+
+Cons:
+\begin{itemize}
+\item Wages of \textbf{new hires} have to be rigid for a firm.
+\item There is mixed evidence of wage rigidity in the data. Both for new hires and outgoing matches.
+\end{itemize}
+
+\end{shaded}
 
 
 
@@ -1865,6 +2618,8 @@ Most times decreases in $u_t$ reflects a good state of the economy, but not alwa
 
 
 
+
+\clearpage
 \newpage
 \printbibliography
 \end{document}

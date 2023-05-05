@@ -348,7 +348,7 @@ Therefore:
 \end{note}
 
 \subsubsection{Steady State}
-We are in steady state when $K_{t+1} = K_t$. From \eqref{capital growth} we get steady state capital denoted $^*$:
+We are in a steady state when $K_{t+1} = K_t$. From \eqref{capital growth} we get steady state capital denoted $^*$:
 \begin{equation}
     \label{steady state}
     K^* = AL\left( \dfrac{s}{\delta}\right)^{\frac{1}{1-\alpha}}.
@@ -385,6 +385,13 @@ where $b \equiv s(AL)^{1-\alpha}$ and our last term $b[K_{t+1}^\alpha - K_t^\alp
 \end{itemize}
 
 From this it is obvious to see that starting from some $K_0<(>)K^*$, over time, the growth rate of capital, $g_t^K$, converges from above (below) towards 0.
+\clearpage
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{photos/dynamics of K.png}
+    \caption{Dynamics of K graph}
+    \label{fig:dynamics of K}
+\end{figure}
 
 \subsubsection{Convergence of $Y$}
 
@@ -402,8 +409,293 @@ Suppose $K_0<K^*$, the economy will grow over time, but at a lower and lower rat
 $\frac{\partial Y(K)}{\partial K} = \alpha K^{\alpha-1}(AL)^{1-\alpha}$ decreases as $K$ increases.
 
 \begin{itemize}
-    \item The representative agent saves a constant fraction $s$ of income, and invests in new capital. More capital increases GDP, but each additional unit of $K$ has an increasingly small effect on $Y$ and therefore investment ($I = sY$). Eventually the additional new capital matches the depreciated capital.
+    \item The representative agent saves a constant fraction $s$ of income, and invests in new capital. More capital increases GDP, but each additional unit of $K$ has an increasingly small effect on $Y$ and therefore investment ($I = sY$). Eventually, the additional new capital matches the depreciated capital.
 \end{itemize}
+
+\subsubsection{Growth Rate of K}
+
+Let $g_t^K \equiv \frac{K_t}{K_{t-1}}-1$ denote the \textbf{growth rate} of $K$. It can be shown that starting from some $K_0<(>) K^*$, over time, $g_t^K$ converges monotonically from above (below) toward 0. Hence:
+\begin{itemize}
+    \item If $K_0<K^{\star}$, then $g_1^K>g_2^K>g_3^K>\ldots>g_{\infty}^K=0$.
+    \item If $K_0>K^{\star}$, then $g_1^K<g_2^K<g_3^K<\ldots<g_{\infty}^K=0$.
+    \item If $K_0=K^{\star}$, then $g_1^K=g_2^K=g_3^K=\ldots=g_{\infty}^K=0$.
+\end{itemize}
+
+\subsubsection{Growth Rate of Y}
+
+Use $Y_t$ and $Y_{t-1}$ from the Cobb-Douglas to find the \textbf{growth rate} of Y
+
+\begin{equation}
+g_t^Y \equiv \frac{Y_t}{Y_{t-1}}-1=\frac{K_t^\alpha(A L)^{1-\alpha}}{K_{t-1}^\alpha(A L)^{1-\alpha}}-1=\left(\frac{K_t}{K_{t-1}}\right)^\alpha-1
+\end{equation}
+
+since $g_t^K = \frac{K_t}{K_{t-1}}=g_t^K + 1$ and thus
+\begin{equation}
+g_t^Y=\left(g_t^K+1\right)^\alpha-1
+\end{equation}
+
+This just means that the higher (lower) the growth rate of $K$, the higher (lower) the growth rate of $Y$. It follows that:
+
+\begin{itemize}
+    \item If $K_0<K^{\star}$, then $g_1^Y>g_2^Y>g_3^Y>\ldots>g_{\infty}^Y=0$.
+    \item If $K_0>K^{\star}$, then $g_1^Y<g_2^Y<g_3^Y<\ldots<g_{\infty}^Y=0$.
+    \item If $K_0=K^{\star}$, then $g_1^Y=g_2^Y=g_3^Y=\ldots=g_{\infty}^Y=0$.
+\end{itemize}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=12cm]{photos/steady state: graph.png}
+    \caption{Steady State: Graph}
+    \label{fig:steady state capital}
+\end{figure}
+
+\begin{mdframed}
+\subsection{Implications}
+This model captures the fact that having little capital (relative to a steady state) leads to high growth because the marginal product of capital is high, but capital accumulation \textbf{cannot} generate long-run growth due to decreasing marginal product of capital. 
+\end{mdframed}
+
+\subsection{Steady State Comparative Statics}
+
+We have:
+\begin{align}
+    K^* &= AL\left(\dfrac{s}{\delta}\right)^{\frac{1}{1-\alpha}} \\
+    Y^* &= AL\left(\dfrac{s}{\delta}\right)^{\frac{\alpha}{1-\alpha}}
+\end{align}
+\begin{note}
+    Steady State capital per worker and GDP per worker does not depend on population size
+\end{note}
+
+\begin{equation}
+\begin{aligned}
+& k^{\star} \equiv \frac{K^{\star}}{L}=A\left(\frac{S}{\delta}\right)^{\frac{1}{1-\alpha}} \\
+& y^{\star} \equiv \frac{Y^{\star}}{L}=A\left(\frac{S}{\delta}\right)^{\frac{\alpha}{1-\alpha}}
+\end{aligned}
+\end{equation}
+
+\begin{mdframed}
+An increase in $s$ or a decrease in $\delta$ leads to an increase in our steady-state level of capital and output.
+\begin{intu}
+    If individuals save more or if capital depreciates more slowly, then \textbf{more steady state capital builds up}. This increases steady-state GDP as well, but the elasticity of $Y^*$ to $s$ and $\delta$ is weaker than that of $K^*$ because $Y$ features decreasing returns in $K$.
+\end{intu}
+\end{mdframed}
+
+\begin{mdframed}
+    An increase in $A$ leads to an increase in $K^*$ and $Y^*$.
+    \begin{intu}
+        Higher productivity implies that the economy produces more output. This induces more investment and hence can sustain a higher steady state capital. 1\% increase in $A$ leads to a 1\% increase in both $K^*$ and $Y^*$.
+    \end{intu}
+\end{mdframed}
+
+\begin{mdframed}
+    An increase in $L$ leads to an increase in $K^*$ and $Y^*$.
+    \begin{intu}
+        More labour means that the economy produces more output. This induces more investment and hence can sustain a higher steady state capital. A 1\% increase in $L$ leads to a 1\% increase in both $K^*$ and $Y^*$.
+    \end{intu}
+\end{mdframed}
+
+\subsubsection{Capital as an Explanatory variable of GDP}
+
+Does capital cause GDP, and its growth rate $G^Y$? It \textbf{depends on the time frame}. 
+\begin{itemize}
+    \item Very Short term: at $t=0$ where $K_0$ is fully \textbf{exogenous} $K$ causes $Y$ and $g^Y$.
+    \begin{itemize}
+        \item If $K_0$ is low then $Y_0$ is low.
+        \item If $K_0$ is low then the initial growth rate $g_1^Y$ is high
+    \end{itemize}
+    \item Very long term: at $t=\infty$ where $K^*$ is fully \textbf{endogenous} $K$ \textbf{does not} really cause GDP. 
+    \begin{itemize}
+        \item both $K^*$ and $Y^*$ are determined endogenously by underlying parameters ($s, \delta, \alpha, A, L$).
+        \item the growth rate $g^Y$ is 0.
+    \end{itemize}
+\end{itemize}
+
+
+
+\subsection{Examples}
+
+\subsubsection{Convergence}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{photos/example convergence solow .png}
+    \caption{Example of Convergence}
+    \label{fig:Solow Convergence}
+\end{figure}
+\begin{note}
+    The poor country starts at 1/4 of the rich country's GDP. Most of the convergence happens extremely fast, clearly too fast to be realistic.
+\end{note}
+
+\subsubsection{Parameter Change}
+
+Assume the economy is in steady state until period 0, then one of the following parameters change:
+\begin{enumerate}
+    \item Permanent increase of TFP, $A$, of 100\% (0.553 to 1.106)
+    \item Permanent increase of savings rate of 100\% (0.2 to 0.4)
+    \item Permanent increase in worker size of 100\% (1 to 2)
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{photos/double A.png}
+    \caption{Increase in TFP}
+    \label{fig:increase A}
+\end{figure}
+
+\begin{intu}
+    Capital does not change instantaneously.Capital builds up because a higher GDP implies more investment which again increases GDP.
+\end{intu}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{photos/double s.png}
+    \caption{Increase in Savings Rate}
+    \label{fig:increase s}
+\end{figure}
+
+\begin{intu}
+    Savings rate doubles and capital increases through higher investment. This leads to a higher GDP and hence more investment.
+\end{intu}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=10cm]{photos/double L.png}
+    \caption{Increase in Labour Force}
+    \label{fig:increase L}
+\end{figure}
+\begin{intu}
+    Capital is not affected instantaneously.\textbf{ GDP per worker falls}. The larger GDP then leads to capital growth, so that eventually the economy's long-run GDP doubles and GDP per worker returns to the initial level.
+\end{intu}
+
+\begin{note}
+    Convergence to the new steady state in these examples was relatively slow, but \textbf{the exogenous parameter variations were enormous}. 
+\end{note}
+
+\subsubsection{Short-run departure from steady state}
+
+The literature finds that departures from steady state, or the transition from one steady state to another is fast. 
+
+Similar economies are thought to form "convergence clubs" so that they are permanently in motion but typically fluctuate around their steady state, with each "club of economies" having its own steady state.
+
+\subsection{Balanced Growth Path}
+
+\subsubsection{Motivation}
+
+The basic Solow model is obviously counterfactual because there is no long-term growth. We want to introduce \textbf{exogenous} population and technological growth. We now look at a \textbf{balanced growth path (BGP)} rather than a steady state.
+
+\subsubsection{Additonal Assumptions}
+
+\begin{shaded}
+    Popoulation/labour grows at a constant rate $n$. Its size in period $t$ is
+    \[L_t = L_0(1+n)^t\]
+
+    Technology grows at a constant rate $g$. Its size in period $t$ is
+    \[A_t = A_0(1+g)^t\]
+
+    Instead of the previous parameters $L$ and $A$ we now have $L_t$ and $A_t$. We now think in terms of our variables \textbf{per effective worker}.
+    \[\Tilde{k}_t \equiv\dfrac{K_t}{A_tL_t}, \qquad \Tilde{l}_t \equiv\dfrac{L_t}{A_tL_t}, \qquad \Tilde{y}_t \equiv\dfrac{Y_t}{A_tL_t}\]
+\end{shaded}
+
+\subsubsection{Capital Accumulation}
+
+The new capital accumulation equation is
+\begin{equation}
+    \label{BGP capital accumulation}
+    K_{t+1} = (1-\delta)K_t + sK_t^\alpha (A_tL_t)^{1-\alpha}, \quad \forall t \geq0
+\end{equation}
+
+It can be shown that a steady state such that $K_{t+1} = K_t = K^*$ does \textbf{NOT} exist.
+
+\subsubsection{Redefining Variables}
+
+Re-writing our capital accumulation equation \eqref{BGP capital accumulation} as:
+
+\begin{equation}
+\begin{aligned}
+K_{t+1} & =(1-\delta) K_t+s K_t^\alpha\left(A_t L_t\right)^{1-\alpha} \\
+\Leftrightarrow \frac{K_{t+1}}{A_{t+1} L_{t+1}} A_{t+1} L_{t+1} & =A_t L_t\left[(1-\delta) \frac{K_t}{A_t L_t}+\frac{s K_t^\alpha\left(A_t L_t\right)^{1-\alpha}}{A_t L_t}\right] \\
+\Leftrightarrow \tilde{k}_{t+1} \frac{A_{t+1} L_{t+1}}{A_t L_t} & =(1-\delta) \tilde{k}_t+s K_t^\alpha\left(A_t L_t\right)^{-\alpha} \\
+\Leftrightarrow \tilde{k}_{t+1}(1+g)(1+n) & =(1-\delta) \tilde{k}_t+s \tilde{k}_t^\alpha
+\end{aligned}
+\end{equation}
+
+Because $\frac{A_{t+1} L_{t+1}}{A_t L_t}=\frac{A_0(1+g)^{t+1} L_0(1+n)^{t+1}}{A_0(1+g)^t L_0(1+n)^t}=(1+g)(1+n)$. Hence
+\begin{equation}
+\tilde{k}_{t+1}=\frac{(1-\delta) \tilde{k}_t+s \tilde{k}_t^\alpha}{(1+g)(1+n)}
+\end{equation}
+
+\subsubsection{BGP of Capital}
+
+The BGP is sich that capital per effective worker is static, namely $\Tilde{k}_{t+1} = \Tilde{k}_t = \Tilde{k}^*$. Replacing $\Tilde{k}_t$ with $\Tilde{k}^*$ in our re-written capital accumulation equation we have:
+
+\begin{equation}
+\begin{aligned}
+\tilde{k}^{\star} & =\frac{(1-\delta) \tilde{k}^{\star}+s \tilde{k}^{\star \alpha}}{(1+g)(1+n)} \\
+\Leftrightarrow(1+g+n+g n) \tilde{k}^{\star} & =(1-\delta) \tilde{k}^{\star}+s \tilde{k}^{\star \alpha} \\
+\Leftrightarrow(g+n+g n+\delta) \tilde{k}^{\star} & =s \tilde{k}^{\star \alpha} \\
+\Leftrightarrow \tilde{k}^{\star 1-\alpha} & =\frac{s}{g+n+g n+\delta} \\
+\Leftrightarrow \tilde{k}^{\star} & =\left(\frac{s}{g+n+g n+\delta}\right)^{\frac{1}{1-\alpha}} .
+\end{aligned}
+\end{equation}
+
+\begin{shaded}
+    if $K_t$ is such that $\Tilde{k}_t = \frac{K_t}{A_tL_t} < \Tilde{k}_t$, then $\Tilde{k}_t$ increases from $t$ to $t+1$ i.e. $K_t$ will grow at a faster rate than $A_tL_t$.
+\end{shaded}
+
+\subsubsection{Output Growth relative to the BGP}
+
+Let $\Tilde{y}_t = \dfrac{Y_t}{A_tL_t}$ denote output \textbf{per effective worker}. Then
+
+\begin{equation}
+\begin{aligned}
+\tilde{y}_t & =\frac{K_t^\alpha\left(A_t L_t\right)^{1-\alpha}}{A_t L_t}=K_t^\alpha\left(A_t L_t\right)^{-\alpha} \\
+& =\tilde{k}_t^\alpha
+\end{aligned}
+\end{equation}
+
+\begin{shaded}
+    if $\Tilde{k}_t<\Tilde{k}^*$, then $\Tilde{k}_t$ and therefore $\Tilde{y}_t$ increases from $t$ to $t+1$ i.e. $Y_t$ will grow at a faster rate than $A_tL_t$.
+\end{shaded}
+
+\subsubsection{GDP and GDP per worker on BGP}
+
+On the BGP we have $\Tilde{y}_t = \Tilde{y}_{t+1} = \Tilde{y}^*$. From our equations of capital and output on the BGP we have:
+
+\begin{equation}
+\begin{aligned}
+\tilde{y}^{\star} & =\tilde{k}^{\star \alpha}=\left[\left(\frac{s}{g+n+g n+\delta}\right)^{\frac{1}{1-\alpha}}\right]^\alpha \\
+& =\left(\frac{s}{g+n+g n+\delta}\right)^{\frac{\alpha}{1-\alpha}} .
+\end{aligned}
+\end{equation}
+
+\begin{note}
+    Since $\Tilde{y}_t = \frac{Y_t}{A_tL_t}$, then $\Tilde{y}^* = \frac{Y_t^*}{A_tL_t}$. This implies that output and output per worker on the BGP are simply $Y_t^* = \Tilde{y}^* A_tL_t$ and $y_t^* = \Tilde{y}^* A_t$. This gives us:
+    \begin{align}
+        \text{Long-Run GDP:} & Y_t^{\star}=A_t L_t\left(\frac{s}{g+n+g n+\delta}\right)^{\frac{\alpha}{1-\alpha}} \\
+        \text{Long-Run GDP per worker:} & y_t^{\star}=A_t\left(\frac{s}{g+n+g n+\delta}\right)^{\frac{\alpha}{1-\alpha}}
+    \end{align}
+\end{note}
+
+GDP per worker $y_t$ only changes if $A_t$ changes. That means it grows at the rate of technology. This means that the long-run GDP per worker growth rate is g. \textbf{The only source of long-term growth in income per worker is technology}.
+
+\begin{shaded}
+\subsection{Comparison}
+
+The augmented Solow Model is a generalisation of the basic Solow model. They coincide when $g=0$ and $n=0$. There are analogous convergence properties outside the steady state/BGP.
+
+\begin{itemize}
+    \item Basic Solow Model: If we start with little (much) $K$ relative to steady state $K^* \Rightarrow$ $K$ and $Y$ grow (fall) through time.
+
+    \item Augmented Solow Model: Starting with little (much) $K$ relative to BGP $\Tilde{k}^* \Rightarrow \Tilde{k}$ and $\Tilde{y}$ grow (fall) through time. This means that $K$ and $Y$ grow more quickly (slowly) than $AL$, which grow at the rate $g+n+gn$.
+\end{itemize}
+
+The main difference:
+\begin{enumerate}
+    \item In the basic Solow, in the long-run $K=K^*$ and $Y=Y^*$ and there is \textbf{no growth}.
+    \item In the augmented Solow, in the long-run $K_t = \Tilde{k}A_tL_t$ and $Y_t = \Tilde{y}A_tL_t$. $K$ and $Y$ grow at the rate $g+n+gn$, while per-worker $k$ and $y$ grow at rate $g$.
+\end{enumerate}
+
+
+\end{shaded}
+
 
 \section{Inter-Temporal Optimisation and Capital Accumulation}
 

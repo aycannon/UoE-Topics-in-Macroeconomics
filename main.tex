@@ -53,7 +53,7 @@ Other issues with GDP:
 \subsection{National Accounting}
 \subsubsection{Final and Intermediate goods}
 
-Let$s\in \{ 1,2,\ldots, S\}$ indicate a sector (or type of good) in the economy. Supply - the economy produces $q_s$ and imports $m_s$ of sector $s$ goods. Demand - good $s$ is either used for final domestic consumption $d_s$, export $x_s$ or as intermediate goods $b_S$.\\
+Let$s\in \{ 1,2,\ldots, S\}$ indicate a sector (or type of good) in the economy. Supply - the economy produces $q_s$ and imports $m_s$ of sector $s$ goods. Demand - good $s$ is either used for final domestic consumption $d_s$, export $x_s$ or as intermediate goods $b_s$.\\
 The intermediate good from sector $s$ may potentially be used by all industries in the economy:
 \[ \sum_{j=1}^S b_{sj} = b_s\]
 
@@ -68,7 +68,7 @@ The intermediate good from sector $s$ may potentially be used by all industries 
 
 \subsubsection{Final and Intermediate Value}
 
-Let $p_S$ be the price of good $s$ (what producers charge and what consumers pay). Multiplying Equation \eqref{final goods} by $p_s$ gives:
+Let $p_s$ be the price of good $s$ (what producers charge and what consumers pay). Multiplying Equation \eqref{final goods} by $p_s$ gives:
 \[p_sd_s + p_s x_s +\sum_{j=1}^S p_s b_{sj} = p_sq_s + p_sm_s\]
 
 \begin{shaded}
@@ -208,7 +208,7 @@ with
 We use $\alpha= 1/3$ because on average across the world and time physical capital earns about 1/3 of national income.
 \subsubsection{Variance decomposition}
 Taking logs of \eqref{factor only} gives:
-\[\log y - (1-\alpha) \log A + \log y_{KH}\]
+\[\log y = (1-\alpha) \log A + \log y_{KH}\]
 we have:
    
     \begin{align}
@@ -269,7 +269,7 @@ Caselli (2005) considers many adjustments to the factor-only model which gives i
 Alternative measures $h$ and $k$ that account for better quality differences:
 \begin{enumerate}
     \item \textbf{Quality of schooling}: typically lower in poorer countries, meaning that our measure of $h$ is overestimated so an adjusted measure of $y_{KH}$ would have more explanatory power.
-    \item \textbf{Experience}: Human capital also accumulates through work experience. In power countries workers on average have more work experience, but typically have lower returns from experience.
+    \item \textbf{Experience}: Human capital also accumulates through work experience. In poorer countries workers on average have more work experience, but typically have lower returns from experience.
     \item \textbf{Health}: Workers in poorer countries are typically less healthy, which can impair physical and cognitive function and hence exaggerate our measure of $h$.
     \item \textbf{R\&D content of physical capital}: The quality $k$ is probably lower in poorer countries because of lower R\&D content. The magnitude of this effect is difficult to establish.
 \end{enumerate}
@@ -2622,7 +2622,4 @@ Cons:
 
 
 
-\clearpage
-\newpage
-\printbibliography
 \end{document}
